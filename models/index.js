@@ -3,7 +3,7 @@ const Store = require('./Store');
 const GiftCard = require('./GiftCard');
 const WishList = require('./WishList');
 
-// Store belongs to one Gift Card
+// Store has one Gift Card
 Store.belongsTo(GiftCard, {
   foreignKey: "store_id",
   onDelete: "CASCADE",
