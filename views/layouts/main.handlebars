@@ -1,0 +1,34 @@
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8' />
+    <title>Wish List Keeper</title>
+    <link rel='stylesheet' href='/public/css/jass.css' />
+    <link rel='stylesheet' href='/public/css/' />
+  </head>
+
+  <body>
+    <div id='headerNav'>
+      <header>
+        <h1>
+          Track Your Wish List's!
+        </h1>
+        <nav>
+          {{! conditional rendering for login or log out }}
+
+        </nav>
+      </header>
+
+      <main>
+        {{! render content }}
+        {{{body}}}
+      </main>
+      <footer>
+        Created by Alexander Lazar, Elizabeth Larson, Francis Aguinaldo, Shang
+        Celsius, and Zane Pisano, 2022
+      </footer>
+    </div>
+
+    {{! logout link for when user is logged in }}
+  </body>
+</html>
