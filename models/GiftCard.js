@@ -12,9 +12,12 @@ GiftCard.init(
             autoIncrement: true,
             primaryKey: true,
         },
-        giftcard_name: {
+        store_id: {
             type: DataTypes.STRING,
-            allowNull: false,
+            references: {
+                model: "store",
+                key: "id",
+            },
         },
         value: {
             type: DataTypes.DECIMAL(10, 2),
