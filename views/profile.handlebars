@@ -1,0 +1,55 @@
+<div>
+  <div>
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div>
+  <div>
+    <h3>Add a new store and wish list!</h3>
+
+    <form class='form new-store-form'>
+      <div class='form-group'>
+        <label for='store-name'>Store Name:</label>
+        <input
+          class='form-input'
+          type='text'
+          id='store-name'
+          name='store-name'
+        />
+      </div>
+      <div class='form-group'>
+        <p>
+          <label for='store-giftcard'>Do you have a gift card for this store?</label></p>
+        <input
+          class='form-input'
+          type='radio'
+          id='yes-giftcard'
+          name='store-giftcard'
+          value='Yes'
+        />
+        <label for='yes-giftcard'>Yes</label>
+        <input
+          class='form-input'
+          type='radio'
+          id='no-giftcard'
+          name='store-giftcard'
+          value='Yes'
+        />
+        <label for='no-giftcard'>No</label>
+      </div>
+      <div class='form-group'>
+        <label for='wishlist'>Wish List Items:</label>
+        <input
+          class='form-input'
+          type='text'
+          id='wishlist-items'
+          name='wishlist-items'
+        />
+        <div class='form-group'>
+          <button type='submit' class=''>Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
