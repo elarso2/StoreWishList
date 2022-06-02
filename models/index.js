@@ -3,35 +3,25 @@ const Store = require('./Store');
 const GiftCard = require('./GiftCard');
 const WishList = require('./WishList');
 
-// Store has one Gift Card
+// Store belongs to one Gift Card
 Store.belongsTo(GiftCard, {
   foreignKey: "store_id",
   onDelete: "CASCADE",
 });
 
-// Gift Card has one Store
-GiftCard.belongsTo(Store, {
-  foreignKey: "giftcard_id",
-});
-
-// Stores belongToMany WishLists (through StoreWishList)
+// Stores have many WishLists items
 Store.belongsToMany(WishList, {
-  through: {
-    model: StoreWishList,
-    unique: false,
-  },
-  as: "store_tags",
   foreignKey: "store_id",
 });
 
-// WishLists belongToMany Stores (through StoreWishList)
+// Gift Card belongs to one Store
+GiftCard.hasOne(Store, {
+  foreignKey: "giftcard_id",
+});
+
+// WishLists items belong to one Store
 WishList.belongsTo(Store, {
-  through: {
-    model: StoreTag,
-    unique: false,
-  },
-  as: "stores_tagged",
-  foreignKey: "tag_id"
+  foreignKey: "wishlist_id"
 });
 
 module.exports = {
