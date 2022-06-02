@@ -2,7 +2,7 @@
 const User = require('./User');
 const Store = require('./Store');
 const GiftCard = require('./GiftCard');
-const WishList = require('./WishList');
+const Items = require('./Items');
 
 // User has many Gift Cards
 User.hasMany(GiftCard, {
@@ -16,8 +16,8 @@ Store.hasOne(GiftCard, {
 });
 
 // Store has many Wish List items
-Store.hasMany(WishList, {
-  foreignKey: "wishlist_id",
+Store.hasMany(Items, {
+  foreignKey: "items_id",
 });
 
 // Gift Card belongs to one Store
@@ -25,14 +25,14 @@ GiftCard.belongsTo(Store, {
   foreignKey: "giftcard_id",
 });
 
-// WishLists items belongs to one Store
-WishList.belongsTo(Store, {
-  foreignKey: "wishlist_id"
+// Items belongs to one Store
+Items.belongsTo(Store, {
+  foreignKey: "items_id"
 });
 
 module.exports = {
   User,
   Store,
   GiftCard,
-  WishList,
+  Items,
 };
