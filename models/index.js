@@ -13,11 +13,13 @@ User.hasMany(GiftCard, {
 // Store has one Gift Card
 Store.hasOne(GiftCard, {
   foreignKey: "giftcard_id",
+  onDelete: 'CASCADE'
 });
 
 // Store has many Wish List items
 Store.hasMany(Items, {
   foreignKey: "items_id",
+  onDelete: 'CASCADE'
 });
 
 // Gift Card belongs to one Store
