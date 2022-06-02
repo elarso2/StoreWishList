@@ -31,6 +31,7 @@ WishList.belongsTo(Store, {
 });
 
 module.exports = {
+  User,
   Store,
   GiftCard,
   WishList,
