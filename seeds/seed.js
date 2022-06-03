@@ -1,5 +1,5 @@
 const sequelize = require('sequelize');
-const { User, Store, Wishlist, Giftcard } = require('../models');
+const { User, Store, Items, GiftCard } = require('../models');
 
 const userData = require('./userData.json');
 const storeData = require('./storeData.json');
