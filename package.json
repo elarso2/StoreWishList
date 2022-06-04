@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/elarso2/StoreWishList#readme",
   "dependencies": {
+    "accessibility": "^3.0.16",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
+    "darkmode-js": "^1.5.7",
     "dotenv": "^16.0.1",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
