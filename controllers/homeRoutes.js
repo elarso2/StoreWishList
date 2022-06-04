@@ -1,6 +1,9 @@
 const router =require ('express').Router();
-const {}=require('../models')
-const withAuth = require('../utils')
+const { User,
+    Store,
+    GiftCard,
+    Items,}=require('../models')
+const withAuth = require('../utils/Auth')
 
 
 router.get('/', async (req , res)=>{
