@@ -4,7 +4,7 @@ const { User, Store, Items, GiftCard } = require('../models');
 const userData = require('./userData.json');
 const storeData = require('./storeData.json');
 const giftcardData = require('./giftcardData.json');
-const wishlistData = require('./itemsData.json');
+const itemsData = require('./itemsData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -15,18 +15,13 @@ const seedDatabase = async () => {
   });
 
   //seeding store data
-  // for (const store of storeData) {
-  //   await Store.create({
-  //     ...store,
-  //   });
-  // }
-  await Store;
+  await Store.bulkCreate(storeData);
 
   //seeding wishlist data
-  await Items;
+  await Items.bulkCreate(itemsData);
 
   //seeding giftcard data
-  await GiftCard;
+  await GiftCard.bulkCreate(giftcardData);
 
   process.exit(0);
 };
