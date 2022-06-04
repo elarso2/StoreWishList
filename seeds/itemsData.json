@@ -1,14 +1,14 @@
 [
   {
-    "product_name": "Hiking pants"
+    "item_name": "Hiking pants"
   },
   {
-    "product_name": "running shoes"
+    "item_name": "running shoes"
   },
   {
-    "product_name": "throw pillow"
+    "item_name": "throw pillow"
   },
   {
-    "product_name": "pillow"
+    "item_name": "pillow"
   }
 ]
