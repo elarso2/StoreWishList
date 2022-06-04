@@ -1,6 +1,4 @@
 const router =require ('express').Router();
-const req = require('express/lib/request');
-const res = require('express/lib/response');
 const {}=require('../models')
 const withAuth = require('../utils')
 
@@ -8,6 +6,8 @@ const withAuth = require('../utils')
 router.get('/', async (req , res)=>{
     try{
 
+    }catch (err){
+        res.status(500).json(err);
     }
 });
 
@@ -15,6 +15,8 @@ router.get('/', async (req , res)=>{
 router.get('', async (req, res)=>{
     try{
 
+    }catch (err){
+        res.status(500).json(err);
     }
 });
 
