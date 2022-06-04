@@ -5,6 +5,15 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
+//Darkmode npm package import
+import Darkmode from 'darkmode-js';
+ 
+new Darkmode().showWidget();
+
+//Accessibility npm package import
+window.addEventListener('load', function() { new Accessibility(); }, false);
+
+
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
