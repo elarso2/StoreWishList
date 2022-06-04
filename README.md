@@ -33,9 +33,21 @@ A wireframe setup of our application can be viewed [here]().
 
 And our project presentation can be viewed by following [this link](https://docs.google.com/presentation/d/1hNsW55gy8Cug0tZ5fcUg5wtITZiIPphyYrzN69jnYKU/edit?usp=sharing).
 
-## Dependencies
+## Dependencies and Technologies
 
-Development of this application required the Express, Express-Session, Express-handlebars, MySQL2, Sequelize, Connect-Session-Sequelize, Bcrypt, Dotenv, ESLint, Eslint-Config-Prettier, Prettier and _____ npm packages.
+Development of this application/ npm packages required:
+1.  Express, 
+2.  Express-Session, 
+3.  Express-handlebars, 
+4.  MySQL2, 
+5.  Sequelize, 
+6.  Connect-Session-Sequelize, 
+7.  Bcrypt, 
+8.  Dotenv, 
+9.  ESLint, 
+10. Eslint-Config-Prettier, 
+11. Prettier and 
+
 
 ## Testing
 
