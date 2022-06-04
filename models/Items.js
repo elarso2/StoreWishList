@@ -16,6 +16,13 @@ Items.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        store_id: {
+            type: DataTypes.STRING,
+            references: {
+                model: "store",
+                key: "id",
+            },
+        },
     },
 
     {
