@@ -8,15 +8,17 @@ const withAuth = require('../utils/Auth')
 
 router.get('/', async (req , res)=>{
     try{
-
-    }catch (err){
-        res.status(500).json(err);
-    }
-});
-
-
-router.get('', async (req, res)=>{
-    try{
+        const GiftCardData = await GiftCard.findAll(
+            {
+                exclude: [ value]
+            }
+        );
+        const cards = GiftCardData.map((GiftCard)=> GiftCard.get({plain: true}));
+        console.log(cards)
+        res.render("homepage",{
+            cards,
+            logged_in: req.session.logged_in,
+        });
 
     }catch (err){
         res.status(500).json(err);
@@ -24,13 +26,13 @@ router.get('', async (req, res)=>{
 });
 
 router.get('/login', (req,res)=>{
-    if (req.session.loggrd_in){
+    if (req.session.logged_in){
         res.redirect('/profile');
         return;
     }
     res.render('login')
 
-})
+});
 
 
 module.exports = router;
