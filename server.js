@@ -7,12 +7,17 @@ const helpers = require('./utils/helpers');
 
 //Darkmode npm package import
 import Darkmode from 'darkmode-js';
- 
+
 new Darkmode().showWidget();
 
 //Accessibility npm package import
-window.addEventListener('load', function() { new Accessibility(); }, false);
-
+window.addEventListener(
+  'load',
+  function () {
+    new Accessibility();
+  },
+  false
+);
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -29,8 +34,8 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize
-  })
+    db: sequelize,
+  }),
 };
 
 app.use(session(sess));
@@ -47,3 +52,4 @@ app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
+});
