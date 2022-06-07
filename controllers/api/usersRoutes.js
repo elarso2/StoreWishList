@@ -4,7 +4,7 @@ const { User,
     Store,
     GiftCard,
     Items,}=require('../../models')
-const withAuth = require('../utils/Auth')
+const withAuth = require('../utils/auth')
 
 router.post('/', async (req, res)=>{
     try{
