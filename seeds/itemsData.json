@@ -1,14 +1,18 @@
 [
   {
-    "item_name": "Hiking pants"
+    "item_name": "Hiking pants",
+    "store_id": 1
   },
   {
-    "item_name": "running shoes"
+    "item_name": "running shoes",
+    "store_id": 2
   },
   {
-    "item_name": "throw pillow"
+    "item_name": "throw pillow",
+    "store_id": 3
   },
   {
-    "item_name": "pillow"
+    "item_name": "pillow",
+    "store_id": 3
   }
 ]
