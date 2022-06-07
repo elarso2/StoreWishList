@@ -21,9 +21,13 @@ const withAuth = require('../utils/auth');
 //     }
 // });
 
+router.get('/', (req, res) => {
+  res.render('../views/homepage');
+});
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('../views');
     return;
   }
   res.render('login');
