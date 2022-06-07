@@ -1,9 +1,4 @@
 const router = require('express').Router();
-<<<<<<< HEAD
-=======
-const req = require('express/lib/request');
-const res = require('express/lib/response');
->>>>>>> fd1667b (fixing small errors with various files and npm packages)
 const { User, Store, GiftCard, Items } = require('../../models');
 
 const withAuth = require('../../utils/auth');
