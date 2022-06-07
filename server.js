@@ -10,13 +10,13 @@ const Darkmode = require('darkmode-js');
 new Darkmode().showWidget();
 
 //Accessibility npm package import
-window.addEventListener(
-  'load',
-  function () {
-    new Accessibility();
-  },
-  false
-);
+// window.addEventListener(
+//   'load',
+//   function () {
+//     new Accessibility();
+//   },
+//   false
+// );
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);

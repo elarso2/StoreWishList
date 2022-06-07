@@ -25,7 +25,7 @@ router.delete('/:id', async (req, res) => {
       },
     });
     if (!giftCardData) {
-      res.status(404).json({ message: 'No gif card found with this id!' });
+      res.status(404).json({ message: 'No gift card found with this id!' });
       return;
     }
     res.status(200).json(giftCardData);
@@ -47,3 +47,5 @@ router.post('/update/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+module.exports = router;
