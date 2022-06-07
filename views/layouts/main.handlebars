@@ -4,8 +4,8 @@
     <meta charset='UTF-8' />
     <title>Wish List Keeper</title>
     <link rel='stylesheet' href='/public/css/jass.css' />
-    <link rel="stylesheet" href="/public/css/style.css">
-    <link rel="stylesheet" href="/public/css/bootstrap.css">
+    <link rel='stylesheet' href='/public/css/style.css' />
+    <link rel='stylesheet' href='/public/css/bootstrap.css' />
   </head>
 
   <body>
@@ -16,12 +16,13 @@
         </h1>
         <nav>
           {{! conditional rendering for login or log out }}
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+          {{#if logged_in}}
+            <a href='/profile'>profile</a>
+            |
+            <button class='no-button' id='logout'>logout</button>
+          {{else}}
+            <a href='/login'>login</a>
+          {{/if}}
         </nav>
       </header>
 
@@ -37,7 +38,14 @@
 
     {{! logout link for when user is logged in }}
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+      <script src='/js/logout.js'></script>
     {{/if}}
+    <script
+      src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js'
+    ></script>
+    <script>
+      function addDarkmodeWidget() { new Darkmode().showWidget(); }
+      window.addEventListener('load', addDarkmodeWidget);
+    </script>
   </body>
 </html>
