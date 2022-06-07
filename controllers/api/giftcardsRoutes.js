@@ -35,7 +35,6 @@ router.delete('/:id', async (req, res) => {
 });
 
 //update?
-<<<<<<< HEAD
 
 router.post('/update/:id',async (req,res)=>{
     // req.body should look like:
@@ -50,5 +49,3 @@ router.post('/update/:id',async (req,res)=>{
     }
 });
  
-=======
->>>>>>> acb82e9 (fixing small errors with various files and npm packages)
