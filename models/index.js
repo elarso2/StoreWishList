@@ -6,20 +6,20 @@ const Items = require('./Items');
 
 // User has many Gift Cards
 User.hasMany(GiftCard, {
+  onDelete: 'CASCADE',
   foreignKey: 'user_id',
-  onDelete: 'CASCADE'
 });
 
 // Store has one Gift Card
 Store.hasOne(GiftCard, {
+  onDelete: 'CASCADE',
   foreignKey: "giftcard_id",
-  onDelete: 'CASCADE'
 });
 
 // Store has many Wish List items
 Store.hasMany(Items, {
+  onDelete: 'CASCADE',
   foreignKey: "items_id",
-  onDelete: 'CASCADE'
 });
 
 // Gift Card belongs to one Store
@@ -29,7 +29,7 @@ GiftCard.belongsTo(Store, {
 
 // Items belongs to one Store
 Items.belongsTo(Store, {
-  foreignKey: "items_id"
+  foreignKey: "items_id",
 });
 
 module.exports = {
