@@ -1,10 +1,6 @@
-const router =require ('express').Router();
-const { User,
-    Store,
-    GiftCard,
-    Items,}=require('../models')
-const withAuth = require('../utils/Auth')
-
+const router = require('express').Router();
+const { User, Store, GiftCard, Items } = require('../models');
+const withAuth = require('../utils/Auth');
 
 // router.get('/', async (req , res)=>{
 //     try{
@@ -25,14 +21,12 @@ const withAuth = require('../utils/Auth')
 //     }
 // });
 
-router.get('/login', (req,res)=>{
-    if (req.session.logged_in){
-        res.redirect('/profile');
-        return;
-    }
-    res.render('login')
-
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/profile');
+    return;
+  }
+  res.render('login');
 });
-
 
 module.exports = router;
