@@ -17,7 +17,7 @@ Items.init(
             allowNull: false,
         },
         store_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             references: {
                 model: "store",
                 key: "id",
