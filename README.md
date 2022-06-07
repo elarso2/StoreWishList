@@ -25,7 +25,7 @@ SO THAT I can keep track of what items I want to buy from all my favorite stores
 
 ## Links
 
-To view our deployed application, checkout our [Heroku]() page.
+To view our deployed application, checkout our [Heroku](https://aefzs-wishlistkeeper.herokuapp.com/) page.
 
 Our initial project outline can be found [here](https://docs.google.com/document/d/1VM8x9V3RB4M111XoBBW3iHfdzmutCEYimLUaNarOv-Y/edit?usp=sharing).
 
