@@ -13,23 +13,23 @@ User.hasMany(GiftCard, {
 // Store has one Gift Card
 Store.hasOne(GiftCard, {
   onDelete: 'CASCADE',
-  foreignKey: "giftcard_id",
+  foreignKey: 'giftcard_id',
 });
 
 // Store has many Wish List items
 Store.hasMany(Items, {
   onDelete: 'CASCADE',
-  foreignKey: "items_id",
+  foreignKey: 'items_id',
 });
 
 // Gift Card belongs to one Store
 GiftCard.belongsTo(Store, {
-  foreignKey: "giftcard_id",
+  foreignKey: 'giftcard_id',
 });
 
 // Items belongs to one Store
 Items.belongsTo(Store, {
-  foreignKey: "items_id",
+  foreignKey: 'items_id',
 });
 
 module.exports = {
