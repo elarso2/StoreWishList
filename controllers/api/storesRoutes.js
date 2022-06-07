@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const req = require('express/lib/request');
+const res = require('express/lib/response');
 const { User, Store, GiftCard, Items } = require('../../models');
 
 const withAuth = require('../../utils/auth');
