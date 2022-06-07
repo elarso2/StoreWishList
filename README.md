@@ -29,7 +29,7 @@ To view our deployed application, checkout our [Heroku]() page.
 
 Our initial project outline can be found [here](https://docs.google.com/document/d/1VM8x9V3RB4M111XoBBW3iHfdzmutCEYimLUaNarOv-Y/edit?usp=sharing).
 
-A wireframe setup of our application can be viewed [here]().
+A wireframe setup of our application can be viewed [here](https://www.figma.com/file/7E4kSoKQ7lYrzQ06BKtCr9/Wish-Keeper-Wireframe?node-id=0%3A1).
 
 And our project presentation can be viewed by following [this link](https://docs.google.com/presentation/d/1hNsW55gy8Cug0tZ5fcUg5wtITZiIPphyYrzN69jnYKU/edit?usp=sharing).
 
@@ -46,7 +46,9 @@ Development of this application/ npm packages required:
 8.  Dotenv, 
 9.  ESLint, 
 10. Eslint-Config-Prettier, 
-11. Prettier and 
+11. Prettier,
+12. Darkmode-js, and
+13. Accessibility 
 
 
 ## Testing
