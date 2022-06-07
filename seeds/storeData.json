@@ -1,11 +1,14 @@
 [
   {
-    "name": "REI"
+    "name": "REI",
+    "user_id": 1
   },
   {
-    "name": "Outdoor Research"
+    "name": "Outdoor Research",
+    "user_id": 2
   },
   {
-    "name": "Marshalls"
+    "name": "Marshalls",
+    "user_id": 3
   }
 ]
