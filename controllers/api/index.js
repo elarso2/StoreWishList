@@ -10,4 +10,4 @@ router.use('/giftCards',GiftCardRoutes);
 router.use('/items', itemsroutes);
 router.use('/store', storeRoutes);
 
-module.exports = router
+module.exports = router;
