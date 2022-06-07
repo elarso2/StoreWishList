@@ -37,7 +37,3 @@ router.delete('/:id', async (req, res) => {
   }
 });
 //get store data
-<<<<<<< HEAD
-
-=======
->>>>>>> acb82e9 (fixing small errors with various files and npm packages)
