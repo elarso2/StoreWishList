@@ -6,7 +6,7 @@ const { User,
     GiftCard,
     Items,}=require('../../models');
 
-const withAuth = require('../utils/auth')
+const withAuth = require('../../utils/auth')
 
 
 //create
