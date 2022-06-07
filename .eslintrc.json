@@ -32,7 +32,8 @@
     "indent": ["error", 2],
     "quotes": ["error", "single"],
     "semi": ["error", "always"],
-    "radix": "off"
+    "radix": "off",
+    "@next/next/no-img-element": "off"
   },
   "extends": ["prettier"]
 }
