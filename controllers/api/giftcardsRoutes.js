@@ -38,3 +38,7 @@ router.delete('/:id', async (req,res)=>{
 });
 
 //update?
+
+router.post('/update/:id',async (req,res)=>{
+    const giftCardData = await  
+})
