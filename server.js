@@ -4,9 +4,10 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const Darkmode = require('darkmode-js');
 
 //Darkmode npm package import
-import Darkmode from 'darkmode-js';
+// import Darkmode from 'darkmode-js';
 
 new Darkmode().showWidget();
 
