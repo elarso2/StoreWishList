@@ -3,7 +3,7 @@ const { User,
     Store,
     GiftCard,
     Items,}=require('../../models')
-const withAuth = require('../utils/auth')
+const withAuth = require('../../utils/auth')
 
 //create
 router.post('/', async (req,res)=>{
@@ -38,3 +38,17 @@ router.delete('/:id', async (req,res)=>{
 });
 
 //update?
+
+router.post('/update/:id',async (req,res)=>{
+    // req.body should look like:
+    //    {
+    //     "value": 45
+    // }
+    try {
+        const giftCardData = await GiftCard.create(req.body);
+        res.status(200).json(giftCardData);
+    } catch(err) {
+        res.status(500).json(err)
+    }
+});
+ 
