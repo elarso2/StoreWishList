@@ -1,11 +1,11 @@
 const router = require('express').Router();
 const userRoutes = require('./usersRoutes');
-const GiftCardRoutes = require('./giftcardsRoutes');
+const giftCardRoutes = require('./giftcardsRoutes');
 const itemsroutes = require('./itemsRoutes');
 const storeRoutes = require('./storesRoutes');
 
 router.use('/user', userRoutes);
-router.use('/giftCards', GiftCardRoutes);
+router.use('/giftCard', giftCardRoutes);
 router.use('/items', itemsroutes);
 router.use('/store', storeRoutes);
 
