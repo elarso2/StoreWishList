@@ -3,7 +3,7 @@ const { User, Store, GiftCard, Items } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //create
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newGiftCard = await GiftCard.create({
       ...req.body,
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
 });
 
 //delete
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const giftCardData = await GiftCard.destroy({
       where: {
@@ -35,8 +35,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 //update?
-
-router.post('/update/:id', async (req, res) => {
+router.post('/update/:id', withAuth, async (req, res) => {
   // req.body should look like:
   //    {
   //     "value": 45

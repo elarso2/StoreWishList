@@ -3,7 +3,7 @@ const { User, Store, GiftCard, Items } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // add
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
     const newItem = await Items.create({
       ...req.body,
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
 });
 
 // delete
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const itemData = await Items.destroy({
       where: {
