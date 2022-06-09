@@ -35,3 +35,5 @@ router.delete('/:id', async (req, res) => {
   }
 });
 //get store data
+
+module.exports = router;
