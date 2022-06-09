@@ -7,9 +7,10 @@
     <link rel='stylesheet' href='/css/jass.css' />
     <link rel='stylesheet' href='/css/bootstrap.css' />
     <link rel='stylesheet' href='/css/style.css' />
+    <link rel="stylesheet" href='/public/css/cover.css'>
   </head>
 
-  <body>
+  {{!-- <body>
     <div id='headerNav'>
       <header>
         <nav class="navbar navbar-expand-lg bg-dark text-white-50">
@@ -48,6 +49,48 @@
     </div>
 
     {{! logout link for when user is logged in }}
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+    <script
+      src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js'
+    ></script>
+    <script>
+      function addDarkmodeWidget() { new Darkmode().showWidget(); }
+      window.addEventListener('load', addDarkmodeWidget);
+    </script>
+    <script
+      type='text/javascript'
+      src='node_modules/accessibility/dist/accessibility.min.js'
+    ></script>
+  </body> --}}
+  <body class="d-flex h-100 text-center bg-dark">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0"><a class="text-black" href='/'>Wish List Keeper</a></h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            {{#if logged_in}}
+            <a class="nav-link" href='/profile'>Profile</a>
+            {{else}}
+            <a class="nav-link" href='/login'>Login</a>
+            {{/if}}
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3">
+        {{! render content}}
+        {{{body}}}
+      </main>
+
+      <footer class="mt-auto">
+        <p>Created by Alexander Lazar, Elizabeth Larson, Francis Aguinaldo, Shang
+          Celsius, and Zane Pisano Copyright &copy; 2022</p>
+      </footer>
+    </div>
+        {{! logout link for when user is logged in }}
     {{#if logged_in}}
       <script src='/js/logout.js'></script>
     {{/if}}
