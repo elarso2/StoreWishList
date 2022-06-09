@@ -2,24 +2,7 @@ const router = require('express').Router();
 const { User, Store, GiftCard, Items } = require('../models');
 const withAuth = require('../utils/auth');
 
-// router.get('/', async (req , res)=>{
-//     try{
-//         const GiftCardData = await GiftCard.findAll(
-//             {
-//                 exclude: [ value]
-//             }
-//         );
-//         const cards = GiftCardData.map((GiftCard)=> GiftCard.get({plain: true}));
-//         console.log(cards)
-//         res.render("homepage",{
-//             cards,
-//             logged_in: req.session.logged_in,
-//         });
 
-//     }catch (err){
-//         res.status(500).json(err);
-//     }
-// });
 
 router.get('/', (req, res) => {
   res.render('../views/homepage');
