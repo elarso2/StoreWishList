@@ -2,8 +2,6 @@ const router = require('express').Router();
 const { User, Store, GiftCard, Items } = require('../models');
 const withAuth = require('../utils/auth');
 
-
-
 router.get('/', (req, res) => {
   res.render('../views/homepage');
 });
@@ -20,7 +18,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
     res.render('profile', {
       ...user,
-      logged_in: true
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -29,7 +27,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('../views');
+    res.redirect('/profile');
     return;
   }
   res.render('login');
