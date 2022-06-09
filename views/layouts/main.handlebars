@@ -3,9 +3,10 @@
   <head>
     <meta charset='UTF-8' />
     <title>Wish List Keeper</title>
-    <link rel='stylesheet' href='/public/css/jass.css' />
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {{! stylesheet pathways do not need /public/ because it is defined in server.js, line 48 }}
+    <link rel='stylesheet' href='/css/jass.css' />
+    <link rel='stylesheet' href='/css/bootstrap.css' />
+    <link rel='stylesheet' href='/css/style.css' />
   </head>
 
   <body>
@@ -16,12 +17,13 @@
         </h1>
         <nav>
           {{! conditional rendering for login or log out }}
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+          {{#if logged_in}}
+            <a href='/profile'>profile</a>
+            |
+            <button class='no-button' id='logout'>logout</button>
+          {{else}}
+            <a href='/login'>login</a>
+          {{/if}}
         </nav>
       </header>
 
@@ -37,7 +39,18 @@
 
     {{! logout link for when user is logged in }}
     {{#if logged_in}}
-    <script src="/js/logout.js"></script>
+      <script src='/js/logout.js'></script>
     {{/if}}
+    <script
+      src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js'
+    ></script>
+    <script>
+      function addDarkmodeWidget() { new Darkmode().showWidget(); }
+      window.addEventListener('load', addDarkmodeWidget);
+    </script>
+    <script
+      type='text/javascript'
+      src='node_modules/accessibility/dist/accessibility.min.js'
+    ></script>
   </body>
 </html>
