@@ -3,7 +3,6 @@
   <head>
     <meta charset='UTF-8' />
     <title>Wish List Keeper</title>
-    {{! stylesheet pathways do not need /public/ because it is defined in server.js, line 48 }}
     <link rel='stylesheet' href='/css/jass.css' />
     <link rel='stylesheet' href='/css/bootstrap.css' />
     <link rel='stylesheet' href='/css/style.css' />
@@ -55,71 +54,3 @@
     ></script>
   </body>
 </html>
-
-{{!-- <html lang='en'>
-
-  <head>
-    <meta charset='UTF-8' />
-    <title>Wish List Keeper</title>
-    {{! stylesheet pathways do not need /public/ because it is defined in server.js, line 48 }}
-    <link rel='stylesheet' href='/css/jass.css' />
-    <link rel='stylesheet' href='/css/bootstrap.css' />
-    <link rel='stylesheet' href='/css/style.css' />
-  </head>
-
-  <body>
-    <div id='headerNav'>
-      <header>
-        <nav class="navbar navbar-expand-lg bg-dark text-white-50">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="/">Track Your Wish List's!</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  {{#if logged_in}}
-                  <a class="nav-link" href='/profile'>Profile</a>
-                  <a class="nav-link" id='logout'>Logout</a>
-                </li>
-                <li class="nav-item">
-                  {{else}}
-                  <a class="nav-link" <a href='/login'>Login</a>
-                  {{/if}}
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      <main>
-        {{! render content }}
-        {{{body}}}
-      </main>
-        <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
-          <div class="container text-center">
-            <small>Created by Alexander Lazar, Elizabeth Larson, Francis Aguinaldo, Shang
-        Celsius, and Zane Pisano Copyright &copy; 2022 </small>
-          </div>
-        </footer>
-    </div>
-
-    {{! logout link for when user is logged in }}
-    {{#if logged_in}}
-      <script src='/js/logout.js'></script>
-    {{/if}}
-    <script
-      src='https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js'
-    ></script>
-    <script>
-      function addDarkmodeWidget() { new Darkmode().showWidget(); }
-      window.addEventListener('load', addDarkmodeWidget);
-    </script>
-    <script
-      type='text/javascript'
-      src='node_modules/accessibility/dist/accessibility.min.js'
-    ></script>
-  </body>
-</html> --}}
