@@ -50,4 +50,5 @@ module.exports = {
   Store,
   GiftCard,
   Items,
+  newStore,
 };

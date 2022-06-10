@@ -19,7 +19,7 @@ router.post('/', withAuth, async (req, res) => {
 //get store data
 router.get('/:id', withAuth, async (req, res) => {
   try {
-    const storeData = await Store.findByPk(req.params.id, {
+    const storeData = await newStore.findByPk(req.params.id, {
       include: [{ model: User }],
     });
     if (!storeData) {
@@ -35,7 +35,7 @@ router.get('/:id', withAuth, async (req, res) => {
 //delete
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const storeData = await Store.destroy({
+    const storeData = await newStore.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,

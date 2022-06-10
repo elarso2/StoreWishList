@@ -1,0 +1,17 @@
+[
+  {
+    "store_name": "REI",
+    "gc_balance": 45,
+    "items": "pants, shoes, hat"
+  },
+  {
+    "store_name": "marshalls",
+    "gc_balance": 80,
+    "items": "pillow, blanket, sign"
+  },
+  {
+    "store_name": "Target",
+    "gc_balance": 30,
+    "items": "plates, mugs, camera"
+  }
+]
