@@ -1,59 +1,46 @@
 <div>
   <div>
-    <h2>Welcome, {{name}}!</h2>
+    <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
 
 <div>
   <div>
-    <h3>Add a new store and wish list!</h3>
-
-    <form class='form new-store-form'>
-      <div class='form-group'>
-        <label for='store-name'>Store Name:</label>
-        <input
-          class='form-input'
-          type='text'
-          id='store-name'
-          name='store-name'
-        />
-      </div>
-      <div class='form-group'>
-        <p>
-          <label for='store-giftcard'>Do you have a gift card for this store?</label></p>
-        <input
-          class='form-input'
-          type='radio'
-          id='yes-giftcard'
-          name='store-giftcard'
-          value='Yes'
-        />
-        <label for='yes-giftcard'>Yes</label>
-        <input
-          class='form-input'
-          type='radio'
-          id='no-giftcard'
-          name='store-giftcard'
-          value='Yes'
-        />
-        <label for='no-giftcard'>No</label>
-      </div>
-      <div class='form-group'>
-        <label for='wishlist'>Wish List Items:</label>
-        <input
-          class='form-input'
-          type='text'
-          id='wishlist-items'
-          name='wishlist-items'
-        />
+    <button onclick='showForm()'>Add a new store!</button>
+  </div>
+  <div>
+      <form class='form new-store-form' id="newStoreForm">
         <div class='form-group'>
-          <button type='' class=''>Add another item</button>
+          <label for='store-name'>Store Name:</label>
+          <input
+            class='form-input'
+            type='text'
+            id='store-name'
+            name='store-name'
+          />
+        </div>
+        <div class = 'form-group'>
+          <label for="has-giftcard">Do you have a giftcard for this store?</label>
+          <button name="yes-button" id="yes-button" onclick="balanceInput()">Yes</button>
+          <button name="no-button" id="yes=button">No</button>
+        </div>
+        <div class="form-group" id="giftcard-balance">
+          <label>Giftcard Balance:</label>
+          <input class="form-input" type="number" id="gc-bal" name="gc-bal" message="Ex: 45.00">
+        </div>
+        <div class="form-group" id="items">
+          <label>Add an item:</label>
+          <input class="form-input" type="text" id="item" name="item">
         </div>
         <div class='form-group'>
-          <button type='submit' class=''>Save</button>
-        </div>
+          <div class='form-group'>
+            <button type='' class=''>Add another item</button>
+          </div>
+          <div class='form-group'>
+            <button type='submit' class=''>Save</button>
+          </div>
+      </form>
       </div>
-    </form>
   </div>
 
   <div class='store-list'>
@@ -74,4 +61,5 @@
 
 </div>
 
-<script src='../public/js/'></script>
+{{!-- <script src='/js/'></script> --}}
+<script src="/js/form.js"></script>
