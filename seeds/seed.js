@@ -28,6 +28,13 @@ const seedDatabase = async () => {
   //seeding new store test data
   await newStore.bulkCreate(newStoreData);
 
+  for (const store of newStoreData) {
+    await newStore.create({
+      ...store,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+
   process.exit(0);
 };
 
