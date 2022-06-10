@@ -4,9 +4,9 @@
   </div>
 </div>
 
-<div>
+
   <div>
-    <button onclick='showForm()'>Add a new store!</button>
+    <button id='new-store-btn' onclick="showForm()" >Add a new store!</button>
   </div>
   <div>
       <form class='form new-store-form' id="newStoreForm">
@@ -21,8 +21,8 @@
         </div>
         <div class = 'form-group'>
           <label for="has-giftcard">Do you have a giftcard for this store?</label>
-          <button name="yes-button" id="yes-button" onclick="balanceInput()">Yes</button>
-          <button name="no-button" id="yes=button">No</button>
+          <input type="radio" name="yes-button" id="yes-button" onclick="balanceInput()">Yes</input>
+          <input type="radio" name="no-button" id="no-button">No</input>
         </div>
         <div class="form-group" id="giftcard-balance">
           <label>Giftcard Balance:</label>
@@ -40,8 +40,7 @@
             <button type='submit' class=''>Save</button>
           </div>
       </form>
-      </div>
-  </div>
+    </div>
 
   <div class='store-list'>
     <h3>Your Saved Stores:</h3>
@@ -59,7 +58,7 @@
     {{/each}}
   </div>
 
-</div>
+
 
 {{!-- <script src='/js/'></script> --}}
 <script src="/js/form.js"></script>
