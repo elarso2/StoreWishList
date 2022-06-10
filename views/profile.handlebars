@@ -31,14 +31,19 @@
 
   </div>
 
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
+  {{#if newstores.length}}
+  <div class='col-md-6 store-list'>
     <h3>Your Saved Stores:</h3>
 
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href='/store/{{store.id}}'>{{store.name}}</a></h4>
+    {{#each newstore as |newstore|}}
+      <div>
+        <div class=''>
+          <h4><a href='/newStore/{{newstore.id}}'>{{newstore.store_name}}</a></h4>
+        </div>
+        <div class=''>
+          <button class='btn btn-sm btn-danger' data-id='{{newstore.id}}'>Delete
+            this store</button>
+        </div>
       </div>
       <div class="col-md-4">
         <button class='btn btn-sm btn-danger' data-id='{{store.id}}'>Delete
