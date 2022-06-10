@@ -1,10 +1,12 @@
 const sequelize = require('../config/connection');
-const { User, Store, Items, GiftCard } = require('../models');
+const { User, Store, Items, GiftCard, newStore } = require('../models');
 
 const userData = require('./userData.json');
 const storeData = require('./storeData.json');
 const giftcardData = require('./giftcardData.json');
 const itemsData = require('./itemsData.json');
+
+const newStoreData = require('./newStoreData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -22,6 +24,9 @@ const seedDatabase = async () => {
 
   //seeding giftcard data
   await GiftCard.bulkCreate(giftcardData);
+
+  //seeding new store test data
+  await newStore.bulkCreate(newStoreData);
 
   process.exit(0);
 };
