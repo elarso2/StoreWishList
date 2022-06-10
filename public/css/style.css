@@ -35,11 +35,3 @@ ul {
 /* #giftcard-balance {
   display: none;
 } */
-
-fieldset {
-  display: none;
-}
-
-.show_fieldset {
-  display: inline;
-}
