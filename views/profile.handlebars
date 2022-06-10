@@ -6,15 +6,15 @@
 
 
   <div>
-    <button id='new-store-btn' >Add a new store!</button>
+    <p id='new-store-btn' >Add a new store!</p>
   </div>
-      <form class='form new-store-form' id="newStoreForm">
+      <form class='form new-store' id="newStoreForm">
         <div class='form-group'>
-          <label for='store-name' id="store">Store Name:</label>
+          <label for='store-name'>Store Name:</label>
           <input
             class='form-input'
             type='text'
-            id='store-name'
+            id='store'
             name='store-name'
           />
         </div>
@@ -23,11 +23,11 @@
           <button name="yes-button" id="yes-button" onclick="balanceInput()">Yes</button>
           <button name="no-button" id="no-button" onclick = 'stayHidden()'>No</button>
         </div> --}}
-        <div class="form-group" id="giftcard-balance">
+        <div class="form-group">
           <label>Giftcard Balance:</label>
           <input class="form-input" type="number" id="giftcard-balance" name="gc-bal" message="if no giftcard, enter 0">
         </div>
-        <div class="form-group" id="items">
+        <div class="form-group items">
           <label>Add an item:</label>
           <input class="form-input" type="text" id="item" name="item">
         </div>
@@ -36,7 +36,7 @@
             <button type='' class=''>Add another item</button>
           </div>
           <div class='form-group'>
-            <button type='submit' class=''>Save</button>
+            <button type='submit' class=''>Save Store</button>
           </div>
       </form>
 
@@ -61,5 +61,5 @@
 
 
 {{!-- <script src='/js/'></script> --}}
-<script src="/js/form.js"></script>
+{{!-- <script src="/js/form.js"></script> --}}
 <script src="/js/profile2.js"></script>

@@ -5,10 +5,10 @@ const newStoreHandler = async (event) => {
   const giftcardBal = document.querySelector('#giftcard-balance').value.trim();
   const items = document.querySelector('#item').value.trim();
 
-  if (store) {
-    const response = await fetch('/api/store', {
+  if (store && giftcardBal && items) {
+    const response = await fetch('/api/newStore', {
       method: 'POST',
-      body: JSON.stringify({ store }),
+      body: JSON.stringify({ store, giftcardBal, items }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -21,37 +21,37 @@ const newStoreHandler = async (event) => {
     }
   }
 
-  if (giftcardBal) {
-    const response = await fetch('/api/giftCards', {
-      method: 'POST',
-      body: JSON.stringify({ giftcardBal }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+  //   if (giftcardBal) {
+  //     const response = await fetch('/api/giftCards', {
+  //       method: 'POST',
+  //       body: JSON.stringify({ giftcardBal }),
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to save store');
-    }
-  }
+  //     if (response.ok) {
+  //       document.location.replace('/profile');
+  //     } else {
+  //       alert('Failed to save store');
+  //     }
+  //   }
 
-  if (items) {
-    const response = await fetch('/api/items', {
-      method: 'POST',
-      body: JSON.stringify({ items }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+  //   if (items) {
+  //     const response = await fetch('/api/items', {
+  //       method: 'POST',
+  //       body: JSON.stringify({ items }),
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //     });
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to save store');
-    }
-  }
+  //     if (response.ok) {
+  //       document.location.replace('/profile');
+  //     } else {
+  //       alert('Failed to save store');
+  //     }
+  //   }
 };
 
 const delButtonHandler = async (event) => {
