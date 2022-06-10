@@ -27,3 +27,11 @@ header,
 ul {
   list-style-type: circle;
 }
+
+#newStoreForm {
+  display: none;
+}
+
+#giftcard-balance {
+  display: none;
+}
