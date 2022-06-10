@@ -28,10 +28,18 @@ ul {
   list-style-type: none;
 }
 
-#newStoreForm {
+/* #newStoreForm {
+  display: none;
+} */
+
+/* #giftcard-balance {
+  display: none;
+} */
+
+fieldset {
   display: none;
 }
 
-#giftcard-balance {
-  display: none;
+.show_fieldset {
+  display: inline;
 }
