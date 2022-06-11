@@ -13,11 +13,6 @@ const newStoreHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-    //     .then({
-    //         const storeData = fetch(response.body);
-    //   const finalData = storeData.json;
-    //   console.log(finalData);
-    //   });
 
     if (response.ok) {
       document.location.replace('/profile');
@@ -30,6 +25,32 @@ const newStoreHandler = async (event) => {
     }
   }
 };
+
+// const StoreHandler = async (event) => {
+//   event.preventDefault();
+
+//   const store_name = document.querySelector('#store').value.trim();
+//   const gc_balance = document.querySelector('#giftcard-balance').value.trim();
+//   const items = document.querySelector('#item').value.trim();
+
+//   if (store_name && gc_balance && items) {
+//     const settings = {
+//       method: 'POST',
+//       body: JSON.stringify({ store_name, gc_balance, items }),
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     };
+//     try {
+//       const fetchResponse = await fetch('/api/newStore', settings);
+//       const data = await fetchResponse.json();
+//       document.location.replace('/profile');
+//       return data;
+//     } catch (err) {
+//       return err;
+//     }
+//   }
+// };
 
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
@@ -53,4 +74,4 @@ document
 
 // document
 //   .querySelector('.store-list')
-//   .addEventListener('click', delButtonHandler);
+//   .addEventListener('click', delButtonHandler)

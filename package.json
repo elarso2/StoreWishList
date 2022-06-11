@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/elarso2/StoreWishList#readme",
   "dependencies": {
-    "accessibility": "^3.0.16",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
     "darkmode-js": "^1.5.7",
