@@ -1,44 +1,40 @@
-<div>
-  <div>
+<div class="row">
+  <div class="text center">
     <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
 
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Add a new store!</h3>
 
-  <div>
-    <p id='new-store-btn' >Add a new store!</p>
+    <form class='form new-store' id="newStoreForm">
+      <div class="form-group">
+        <label for='store-name'>Store Name:</label>
+        <input class='form-input' type='text' id='store' name='store-name' />
+      </div>
+      <div class="form-group">
+        <label>Giftcard Balance:</label>
+        <input class="form-input" type="number" id="giftcard-balance" name="gc-bal" message="if no giftcard, enter 0">
+      </div>
+      <div class="form-group items">
+        <label>Add an item:</label>
+        <input class="form-input" type="text" id="item" name="item">
+      </div>
+      <div class='form-group'>
+        <button type='' class=''>Add another item</button>
+      </div>
+      <div class='form-group'>
+        <button type='submit' class=''>Save Store</button>
+      </div>
+    </form>
+
   </div>
-      <form class='form new-store' id="newStoreForm">
-        <div class='form-group'>
-          <label for='store'>Store Name:</label>
-          <input
-            class='form-input'
-            type='text'
-            id='store'
-            name='store-name'
-          />
-        </div>
-        <div class="form-group">
-          <label for="giftcard-balance">Giftcard Balance:</label>
-          <input class="form-input" type="number" id="giftcard-balance" name="gc-bal" message="If no giftcard, enter 0">
-        </div>
-        <div class="form-group items">
-          <label for="item">Add an item:</label>
-          <input class="form-input" type="text" id="item" name="item">
-        </div>
-        <div class='form-group'>
-          {{!-- <div class='form-group'>
-            <button type='' class=''>Add another item</button>
-          </div> --}}
-          <div class='form-group'>
-            <button type='submit' class='btn btn-primary'>Save Store</button>
-          </div>
-      </form>
 
-  {{#if newstores.length}}
-  <div class='store-list'>
+
+  <div class='col-md-6 store-list'>
     <h3>Your Saved Stores:</h3>
-
+    {{#if newstores.length}}
     {{#each newstores as |newstore|}}
       <div>
         <div class=''>
@@ -49,10 +45,16 @@
             this store</button>
         </div>
       </div>
+      <div class="col-md-4">
+        <button class='btn btn-sm btn-danger' data-id='{{store.id}}'>Delete
+            this store</button>
+      </div>
+    </div>
     {{/each}}
+    {{/if}}
   </div>
-  {{/if}}
+</div>
 
-
+{{!-- <script src='/js/'></script> --}}
 {{!-- <script src="/js/form.js"></script> --}}
 <script src="/js/profile2.js"></script>
