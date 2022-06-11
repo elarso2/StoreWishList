@@ -1,77 +1,60 @@
-<div>
-  <div>
-    <h2>Welcome, {{name}}!</h2>
+<div class="row">
+  <div class="text center">
+    <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
 
-<div>
-  <div>
-    <h3>Add a new store and wish list!</h3>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Add a new store!</h3>
 
-    <form class='form new-store-form'>
-      <div class='form-group'>
+    <form class='form new-store' id="newStoreForm">
+      <div class="form-group">
         <label for='store-name'>Store Name:</label>
-        <input
-          class='form-input'
-          type='text'
-          id='store-name'
-          name='store-name'
-        />
+        <input class='form-input' type='text' id='store' name='store-name' />
+      </div>
+      <div class="form-group">
+        <label>Giftcard Balance:</label>
+        <input class="form-input" type="number" id="giftcard-balance" name="gc-bal" message="if no giftcard, enter 0">
+      </div>
+      <div class="form-group items">
+        <label>Add an item:</label>
+        <input class="form-input" type="text" id="item" name="item">
       </div>
       <div class='form-group'>
-        <p>
-          <label for='store-giftcard'>Do you have a gift card for this store?</label></p>
-        <input
-          class='form-input'
-          type='radio'
-          id='yes-giftcard'
-          name='store-giftcard'
-          value='Yes'
-        />
-        <label for='yes-giftcard'>Yes</label>
-        <input
-          class='form-input'
-          type='radio'
-          id='no-giftcard'
-          name='store-giftcard'
-          value='Yes'
-        />
-        <label for='no-giftcard'>No</label>
+        <button type='' class=''>Add another item</button>
       </div>
       <div class='form-group'>
-        <label for='wishlist'>Wish List Items:</label>
-        <input
-          class='form-input'
-          type='text'
-          id='wishlist-items'
-          name='wishlist-items'
-        />
-        <div class='form-group'>
-          <button type='' class=''>Add another item</button>
-        </div>
-        <div class='form-group'>
-          <button type='submit' class=''>Save</button>
-        </div>
+        <button type='submit' class=''>Save Store</button>
       </div>
     </form>
+
   </div>
 
-  <div class='store-list'>
-    <h3>Your Saved Stores:</h3>
 
-    {{#each stores as |store|}}
+  <div class='col-md-6 store-list'>
+    <h3>Your Saved Stores:</h3>
+    {{#if newstores.length}}
+    {{#each newstores as |newstore|}}
       <div>
         <div class=''>
-          <h4><a href='/store/{{store.id}}'>{{store.name}}</a></h4>
+          <h4><a href='/newStore/{{newstore.id}}'>{{newstore.store_name}}</a></h4>
         </div>
         <div class=''>
-          <button class='btn btn-sm btn-danger' data-id='{{store.id}}'>Delete
+          <button class='btn btn-sm btn-danger' data-id='{{newstore.id}}'>Delete
             this store</button>
         </div>
       </div>
+      <div class="col-md-4">
+        <button class='btn btn-sm btn-danger' data-id='{{store.id}}'>Delete
+            this store</button>
+      </div>
+    </div>
     {{/each}}
+    {{/if}}
   </div>
-
 </div>
 
-<script src='/public/js/'></script>
+{{!-- <script src='/js/'></script> --}}
+{{!-- <script src="/js/form.js"></script> --}}
+<script src="/js/profile2.js"></script>

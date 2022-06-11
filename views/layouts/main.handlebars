@@ -3,40 +3,40 @@
   <head>
     <meta charset='UTF-8' />
     <title>Wish List Keeper</title>
-    {{! stylesheet pathways do not need /public/ because it is defined in server.js, line 48 }}
     <link rel='stylesheet' href='/css/jass.css' />
     <link rel='stylesheet' href='/css/bootstrap.css' />
     <link rel='stylesheet' href='/css/style.css' />
+    {{! <link rel="stylesheet" href='/css/cover.css'> }}
   </head>
 
-  <body>
-    <div id='headerNav'>
-      <header>
-        <h1>
-          Track Your Wish List's!
-        </h1>
-        <nav>
-          {{! conditional rendering for login or log out }}
-          {{#if logged_in}}
-            <a href='/profile'>profile</a>
-            |
-            <button class='no-button' id='logout'>logout</button>
-          {{else}}
-            <a href='/login'>login</a>
-          {{/if}}
-        </nav>
+  <body class='d-flex h-100 text-center bg-dark'>
+
+    <div class='cover-container d-flex w-100 h-100 p-3 mx-auto flex-column'>
+      <header class='mb-auto'>
+        <div>
+          <h3 class='float-md-start mb-0'><a class='text-black' href='/'>Wish
+              List Keeper</a></h3>
+          <nav class='nav nav-masthead justify-content-center float-md-end'>
+            {{#if logged_in}}
+              <a class='nav-link' href='/profile'>Profile</a>
+              <a class='nav-link' id='logout'>Logout</a>
+            {{else}}
+              <a class='nav-link' href='/login'>Login</a>
+            {{/if}}
+          </nav>
+        </div>
       </header>
 
-      <main>
-        {{! render content }}
+      <main class='px-3'>
+        {{! render content}}
         {{{body}}}
       </main>
-      <footer>
-        Created by Alexander Lazar, Elizabeth Larson, Francis Aguinaldo, Shang
-        Celsius, and Zane Pisano, 2022
+
+      <footer class='mt-auto'>
+        <p>Created by Alexander Lazar, Elizabeth Larson, Francis Aguinaldo,
+          Shang Celsius, and Zane Pisano Copyright &copy; 2022</p>
       </footer>
     </div>
-
     {{! logout link for when user is logged in }}
     {{#if logged_in}}
       <script src='/js/logout.js'></script>

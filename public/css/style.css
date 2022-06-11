@@ -1,6 +1,6 @@
 header,
 .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .no-button {
@@ -25,5 +25,13 @@ header,
 }
 
 ul {
-  list-style-type: circle;
+  list-style-type: none;
 }
+
+/* #newStoreForm {
+  display: none;
+} */
+
+/* #giftcard-balance {
+  display: none;
+} */

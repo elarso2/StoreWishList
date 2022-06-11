@@ -13,6 +13,8 @@ For this project, we were tasked with creating a full-stack application that sho
 * Include user authentication and protect sensitive information,
 * And deploy a polished UI application on Heroku.
 
+We decided to build a Wish List Tracker, because we understand how hard it can be to remember what fun, new things you want to buy from all your favorite stores. This application allows users to create an account and then login at a later time. Once logged in, the user can create a new store, and add a gift card plus its balance if they've got one, and also add any wishlist items they have from that store. Upon saving the store, its name will be displayed in a list of saved stores, and users can click on a store in order to display and edit the store's saved items and gift card data, or delete the store and all its associated data if they'd like.
+
 ## User Story
 
 ```md
@@ -49,7 +51,6 @@ Development of this application/ npm packages required:
 11. Prettier,
 12. Darkmode-js, and
 13. Accessibility 
-
 
 ## Testing
 
