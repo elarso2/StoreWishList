@@ -13,7 +13,13 @@ For this project, we were tasked with creating a full-stack application that sho
 * Include user authentication and protect sensitive information,
 * And deploy a polished UI application on Heroku.
 
-We decided to build a Wish List Tracker, because we understand how hard it can be to remember what fun, new things you want to buy from all your favorite stores. This application allows users to create an account and then login at a later time. Once logged in, the user can create a new store, and add a gift card plus its balance if they've got one, and also add any wishlist items they have from that store. Upon saving the store, its name will be displayed in a list of saved stores, and users can click on a store in order to display and edit the store's saved items and gift card data, or delete the store and all its associated data if they'd like.
+We decided to build a Wish List Tracker, because we understand how hard it can be to remember what fun, new things you want to buy from all your favorite stores. This application allows users to create an account and then login at a later time. Our goal was that once logged in, the user can create a new store, and add a gift card plus its balance if they've got one, and also add any wishlist items they have from that store. Upon saving the store, its name will be displayed in a list of saved stores, and users can click on a store in order to display and edit the store's saved items and gift card data, or delete the store and all its associated data if they'd like. In order to do this, we created four models: User, Store, Giftcard, and Items.
+
+## Troubleshooting and Road Blocks
+
+However, due to issues we had with saving and fetching data across multiple models, we created a new model, NewStore, which housed the giftcard and item data within itself. The corresponding routes and associations were created, but ultimately, we were unable to display the user data on the site. Through the use of some console.log()s, it appears that the new store data being entered by a user is being collected and saved, but despite that, was not displaying under the user's list of saved store. 
+
+We spent many hours attempting to fix the routes with several different REST api syntax methods, but ultimately could not find the root of our problem. We hope to use this as a learning moment for our future development careers, so that we can hopefully avoid problems like this on subsequent projects.
 
 ## User Story
 
@@ -24,6 +30,18 @@ SO THAT I can keep track of what items I want to buy from all my favorite stores
 ```
 
 ## Demonstration
+
+The homepage of our site looks like 
+![homepage](/Assets/Homepage.png)
+
+The login page looks like
+![login](/Assets/Login.png)
+
+And the profile page looks like
+![profile](/Assets/Profile.png)
+
+This screen recording shows the console as a user saves a store, depicting that the store data/request.body do appear to be saved and collected, despite not displaying on the site
+![console video](/Assets/Screen%20Recording%202022-06-11%20at%2008.53.22.mov)
 
 ## Links
 
@@ -48,9 +66,8 @@ Development of this application/ npm packages required:
 8.  Dotenv, 
 9.  ESLint, 
 10. Eslint-Config-Prettier, 
-11. Prettier,
-12. Darkmode-js, and
-13. Accessibility 
+11. Prettier, and
+12. Darkmode-js
 
 ## Testing
 
