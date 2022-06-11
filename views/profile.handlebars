@@ -31,11 +31,10 @@
 
   </div>
 
-  {{#if newstores.length}}
-  <div class='col-md-6 store-list'>
+<div class='col-md-6 store-list'>
     <h3>Your Saved Stores:</h3>
-
-    {{#each newstore as |newstore|}}
+    {{#if newstores.length}}
+    {{#each newstores as |newstore|}}
       <div>
         <div class=''>
           <h4><a href='/newStore/{{newstore.id}}'>{{newstore.store_name}}</a></h4>
@@ -51,8 +50,8 @@
       </div>
     </div>
     {{/each}}
+    {{/if}}
   </div>
-  {{/if}}
 </div>
 
 {{!-- <script src='/js/'></script> --}}
